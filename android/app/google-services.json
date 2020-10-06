@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "369205417605",
+    "firebase_url": "https://open-chat-6a6dc.firebaseio.com",
+    "project_id": "open-chat-6a6dc",
+    "storage_bucket": "open-chat-6a6dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369205417605:android:cb5c7bf94fdf105948fbec",
+        "android_client_info": {
+          "package_name": "com.movil2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369205417605-tma7vvnulfksd9fbcktislngjmud4l4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.movil2",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "369205417605-2pma98gnu073op6vum0mutob8ijomlu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDa4hcY4Pl0yshJ0AVrBWZ99n2zpuSVl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369205417605-2pma98gnu073op6vum0mutob8ijomlu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
