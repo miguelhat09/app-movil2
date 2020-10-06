@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, ImageBackground, TextBase} from 'react-native';
 
-const image = { uri: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-1.2.1&w=1000&q=80" };
+const image = { uri: "https://image.freepik.com/vector-gratis/ilustracion-banner-fondo-negro-lujo-linea-deco-oro-art-deco-elegante_25989-204.jpg" };
 
 class Inicio extends React.Component{
     render(){
@@ -36,13 +36,8 @@ class Inicio extends React.Component{
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Veritatis ullam asperiores
                         cum dignissimos repellat adipisci maxime ut assumenda
-                        nemo eos. Sint numquam hic consequuntur.
+                        nemo eos.
                     </Text>
-                </View>
-                <View style={styles.containerleermas}>
-                    <TouchableOpacity style={styles.boton2}>
-                        <Text style={styles.textoBoton2}>Leer más</Text>
-                    </TouchableOpacity>
                 </View>
                 </ImageBackground>
         </View>
@@ -57,12 +52,12 @@ const styles = StyleSheet.create({
     },
     image: {
         resizeMode: "cover",
-        height: 500
+        height: 460
     },
     infocontainer1: {
         display: 'flex',
         alignItems: 'flex-start',
-        height: 90,
+        height: 95,
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
@@ -72,10 +67,10 @@ const styles = StyleSheet.create({
         padding: 10,
         width: '45%',
         borderRadius: 3,
-        margin: 12
+        margin: 15
     },
     textoBoton: {
-        color: 'lightblue',
+        color: 'white',
     },
     infocontainer2: {
         height: 275,
@@ -84,21 +79,25 @@ const styles = StyleSheet.create({
     titulo: {
         width: '80%',
         fontSize: 25,
-        marginBottom: 10
+        marginBottom: 15,
+        color: 'lightgray'
     },  
     info: {
         height: 120,
-        width: '80%'
+        width: '80%',
+        color: 'lightgray',
+        marginBottom: 20
     },
     titulo2: {
         width: '80%',
         fontSize: 18,
-        marginBottom: 6
+        marginBottom: 10,
+        color: 'lightgray'
     },
     info2: {
         height: 68,
         width: '80%',
-        fontSize: 11
+        color: 'lightgray'
     },
     boton2: {
         display: 'flex',
@@ -109,14 +108,6 @@ const styles = StyleSheet.create({
         width: '80%',
         borderRadius: 3,
         marginTop: 5,
-    },
-    textoBoton2: {
-        color: 'black',
-        fontSize: 11
-    },
-    containerleermas: {
-        height: 35,
-        alignItems: 'center'
     }
 });
 

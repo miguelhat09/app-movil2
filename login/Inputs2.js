@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image } from 'react-native'
 
 class Inputs2 extends Component {
    state = {
@@ -13,11 +13,12 @@ class Inputs2 extends Component {
       this.setState({ password: text })
    }
    login = (email, pass) => {
-      alert('ingrese un correo ' + email + ', y la contraseña ' + pass + ' son incorrectas')
+      alert('Ingrese un correo electronico ' + ' y una contraseña')
    }
    render() {
       return (
          <View style = {styles.container}>
+            <Image style={styles.icono} source={require('../src/imgs/icono_registro.gif')}/>
             <TextInput style = {styles.input}
                underlineColorAndroid = "transparent"
                placeholder = "Ingrese su correo"
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
    },
    submitButton: {
        width: '70%',
-       backgroundColor: 'lightblue',
+       backgroundColor: '#84DBF9',
        padding: 10,
        margin: 15,
        height: 40,
@@ -91,5 +92,11 @@ const styles = StyleSheet.create({
    },
    forgotText: {
        color: 'lightblue'
+   },
+   icono: {
+      width: 40,
+      height: 40,
+      marginTop: 5,
+      opacity: 0.5
    }
 });

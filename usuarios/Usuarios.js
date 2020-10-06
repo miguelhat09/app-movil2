@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity} from 'react-native';
 
-const image = { uri: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-1.2.1&w=1000&q=80" };
+const image = { uri: "https://image.freepik.com/vector-gratis/ilustracion-banner-fondo-negro-lujo-linea-deco-oro-art-deco-elegante_25989-204.jpg" };
 
 class Usuarios extends React.Component{
     render(){

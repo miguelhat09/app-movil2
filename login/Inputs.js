@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet,Image } from 'react-native'
 
-class Inputs extends Component {
+class Inputs extends React.Component {
    state = {
       email: '',
       password: ''
@@ -12,8 +12,8 @@ class Inputs extends Component {
    handlePassword = (text) => {
       this.setState({ password: text })
    }
-   login = (email, pass) => {
-      alert('la cuenta ' + email + ', y/o la contraseña ' + pass + ' son incorrectas')
+   login = () => {
+      alert('El usuario ' + ' y/o la contraseña ' + ' son incorrectos')
    }
    render() {
       return (
@@ -33,9 +33,9 @@ class Inputs extends Component {
                onChangeText = {this.handlePassword}/>
 
             <TouchableOpacity
-               style = {styles.forgot}
+               style = {styles.registry}
                onPress = {() => this.props.navigation.navigate('Registro')}>
-               <Text style = {styles.forgotText}> Registrarse </Text>
+               <Text style = {styles.registryText}> Registrarse </Text>
             </TouchableOpacity>
             
             <TouchableOpacity
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
        width: '70%',
        backgroundColor: 'black',
        padding: 10,
-       margin: 15,
+       marginTop: 25,
        height: 40,
        alignItems: 'center',
        borderRadius: 50
@@ -84,11 +84,15 @@ const styles = StyleSheet.create({
    submitButtonText:{
        color: 'white'
    },
-   forgot: {
+   registry: {
         margin: 10,
-        borderColor: 'black'
+        borderBottomWidth: 0.5,
+        borderColor: 'lightgray',
+        width: '50%',
+        alignItems: 'center'
    },
-   forgotText: {
-       color: 'lightblue'
+   registryText: {
+       color: '#87E0FF',
+       fontSize: 15
    }
 });
