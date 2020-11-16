@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 const image = { uri: "https://image.freepik.com/vector-gratis/ilustracion-banner-fondo-negro-lujo-linea-deco-oro-art-deco-elegante_25989-204.jpg" };
 
-class Productos extends React.Component{
+class Hoteles extends React.Component{
     render(){
         return (
         <View style={styles.container}>
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Productos;
+export default Hoteles;

@@ -18,6 +18,7 @@ class Inputs extends React.Component {
    render() {
       return (
          <View style = {styles.container}>
+            <Image style={styles.icono} source={require('../src/imgs/icono_user.png')}/>
             <TextInput style = {styles.input}
                underlineColorAndroid = "transparent"
                placeholder = "Usuario"
@@ -40,9 +41,7 @@ class Inputs extends React.Component {
             
             <TouchableOpacity
                style = {styles.submitButton}
-               onPress = {
-                  () => this.login(this.state.email, this.state.password)
-               }>
+               onPress = {() => this.props.navigation.navigate('Inicio')}>
                <Text style = {styles.submitButtonText}> Entrar </Text>
             </TouchableOpacity>
          </View>
@@ -53,10 +52,9 @@ export default Inputs
 
 const styles = StyleSheet.create({
    container: {
-       paddingTop: 10,
        backgroundColor: 'white',
-       height: 380,
-       width: 300,
+       height: 360,
+       width: 260,
        borderRadius: 5,
        marginTop: 30,
        marginBottom: 5,
@@ -64,8 +62,8 @@ const styles = StyleSheet.create({
        justifyContent: 'center'
    },
    input: {
-       width: '90%',
-       margin: 20,
+       width: '80%',
+       margin: 10,
        height: 40,
        borderColor: 'lightgray',
        borderWidth: 1,
@@ -73,19 +71,18 @@ const styles = StyleSheet.create({
        borderRadius: 5
    },
    submitButton: {
-       width: '70%',
+       width: '60%',
        backgroundColor: 'black',
        padding: 10,
-       marginTop: 25,
+       marginTop: 50,
        height: 40,
        alignItems: 'center',
-       borderRadius: 50
+       borderRadius: 50,
    },
    submitButtonText:{
        color: 'white'
    },
    registry: {
-        margin: 10,
         borderBottomWidth: 0.5,
         borderColor: 'lightgray',
         width: '50%',
@@ -94,5 +91,10 @@ const styles = StyleSheet.create({
    registryText: {
        color: '#87E0FF',
        fontSize: 15
+   },
+   icono: {
+      width: 50,
+      height: 50,
+      opacity: 0.9
    }
 });

@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, TextInput} from 'react-native';
 import Inputs2 from '../login/Inputs2';
 
-const image = { uri: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-1.2.1&w=1000&q=80" };
+const image = { uri: "https://www.plazandorra.com/cache/df/68/df681b429aeca97acee7eb1bd3deaed3.jpg" };
 
 class Registro extends React.Component{
     render(){

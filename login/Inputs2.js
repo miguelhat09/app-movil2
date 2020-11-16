@@ -55,19 +55,18 @@ export default Inputs2
 
 const styles = StyleSheet.create({
    container: {
-       paddingTop: 10,
-       backgroundColor: 'white',
-       height: 380,
-       width: 300,
-       borderRadius: 5,
-       marginTop: 30,
-       marginBottom: 10,
-       alignItems: 'center',
-       justifyContent: 'center'
+      backgroundColor: 'white',
+      height: 360,
+      width: 260,
+      borderRadius: 5,
+      marginTop: 30,
+      marginBottom: 5,
+      alignItems: 'center',
+      justifyContent: 'center'
    },
    input: {
-       width: '90%',
-       margin: 15,
+       width: '80%',
+       margin: 10,
        height: 40,
        borderColor: 'lightgray',
        borderWidth: 1,
@@ -75,23 +74,16 @@ const styles = StyleSheet.create({
        borderRadius: 5
    },
    submitButton: {
-       width: '70%',
-       backgroundColor: '#84DBF9',
+       width: '60%',
+       backgroundColor: 'black',
        padding: 10,
-       margin: 15,
+       marginTop: 30,
        height: 40,
        alignItems: 'center',
        borderRadius: 50
    },
    submitButtonText:{
        color: 'white'
-   },
-   forgot: {
-        margin: 10,
-        borderColor: 'black'
-   },
-   forgotText: {
-       color: 'lightblue'
    },
    icono: {
       width: 40,

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity} from '
 
 const image = { uri: "https://image.freepik.com/vector-gratis/ilustracion-banner-fondo-negro-lujo-linea-deco-oro-art-deco-elegante_25989-204.jpg" };
 
-class Usuarios extends React.Component{
+class Agregar extends React.Component{
     render(){
         return (
         <View style={styles.container}>
@@ -114,4 +114,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Usuarios;
+export default Agregar;

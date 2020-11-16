@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity} from 'react-native';
 import Inputs from './Inputs';
 
-const image = { uri: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-1.2.1&w=1000&q=80" };
+const image = { uri: "https://cdn.needish.com/is-prod-deals/9KuBr5VdYkQsFbi0DPCeGw/scale/900x600.jpg" };
 
 class Login extends React.Component{
     render(){
@@ -12,11 +12,6 @@ class Login extends React.Component{
                 <View>
                     <Inputs navigation={this.props.navigation}/>
                 </View>
-
-                <TouchableOpacity style={styles.boton}
-                    onPress={() => this.props.navigation.navigate('Inicio')}>
-                    <Text style={styles.textoBoton}>Inicio</Text>
-                </TouchableOpacity>
             </ImageBackground>
         </View>
         );
@@ -26,7 +21,7 @@ class Login extends React.Component{
 
 const styles = StyleSheet.create({
     container: {
-        height: 520
+        height: 550
     },
     textico: {
         textAlign: 'center',
@@ -36,16 +31,8 @@ const styles = StyleSheet.create({
     },
     image: {
         height: 500,
-        resizeMode: "cover",
-        alignItems: 'center'
-    },
-    boton: {
         alignItems: 'center',
-        width: '45%'
-    },
-    textoBoton: {
-        color: 'lightblue'
-    }       
+    }    
 });
 
 export default Login;

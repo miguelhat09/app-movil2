@@ -2,12 +2,12 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import Login from './login/Login';
 import Inicio from './bienvenida/Inicio';
-import Productos from './productos/Productos';
-import Usuarios from './usuarios/Usuarios';
+import Hoteles from './hoteles/Hoteles';
+import Agregar from './agregar/Agregar';
 import Registro from './registro/Registro';
 
 const Stack = createStackNavigator();
@@ -24,17 +24,16 @@ function App() {
         <Stack.Screen
           name="Inicio"
           component={Inicio}
-          options={{title: 'Inicio'}}
           />
           <Stack.Screen 
-          name="Productos" 
-          component={Productos}
-          option={{title: 'Productos'}}
+          name="Hoteles" 
+          component={Hoteles}
+          option={{title: 'Hoteles'}}
           />
           <Stack.Screen 
-          name="Usuarios" 
-          component={Usuarios}
-          option={{title: 'Usuarios'}}
+          name="Agregar" 
+          component={Agregar}
+          option={{title: 'Agregar Hoteles'}}
           />
           <Stack.Screen
           name="Registro"
