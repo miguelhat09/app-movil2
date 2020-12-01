@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, TextInput, StyleSheet,Image } from 'react-native'
+import auth from '@react-native-firebase/auth';
 
 class Inputs extends React.Component {
    state = {
@@ -15,6 +16,21 @@ class Inputs extends React.Component {
    login = () => {
       alert('El usuario ' + ' y/o la contraseña ' + ' son incorrectos')
    }
+
+   __doSingIn = async (email, password) => {
+      try {
+        let response = await auth().signInWithEmailAndPassword(email, password);
+        if (response && response.user) {
+          // Alert.alert('Success ✅', 'Autenticación hecha);
+          this.props.navigation.navigate('Inicio');
+          console.log('el usuario: ', response.user);
+        }
+      } catch (e) {
+        this.setError('Correo y/o contraseña incorrectos');
+        this.setValid(false);
+      }
+    };
+
    render() {
       return (
          <View style = {styles.container}>
@@ -41,7 +57,9 @@ class Inputs extends React.Component {
             
             <TouchableOpacity
                style = {styles.submitButton}
-               onPress = {() => this.props.navigation.navigate('Inicio')}>
+               onPress = {
+                  () => this.__doSingIn(this.state.email, this.state.password)
+               }>
                <Text style = {styles.submitButtonText}> Entrar </Text>
             </TouchableOpacity>
          </View>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image } from 'react-native'
+import auth from '@react-native-firebase/auth';
 
 class Inputs2 extends Component {
    state = {
@@ -15,6 +16,23 @@ class Inputs2 extends Component {
    login = (email, pass) => {
       alert('Ingrese un correo electronico ' + ' y una contraseña')
    }
+
+   __doCreateUser = async () => {
+      try {
+        let response = await auth().createUserWithEmailAndPassword(
+          this.state.email,
+          this.state.password,
+        );
+        // console.log('creando usuario ', response);
+        if (response && response.user) {
+          Alert.alert('Éxito ✅', 'Cuenta creada satisfactoriamente');
+        }
+        navigation.navigate('Login');
+      } catch (e) {
+        console.error(e.message);
+      }
+    };
+
    render() {
       return (
          <View style = {styles.container}>
@@ -43,7 +61,7 @@ class Inputs2 extends Component {
             <TouchableOpacity
                style = {styles.submitButton}
                onPress = {
-                  () => this.login(this.state.email, this.state.password)
+                  () => this.__doCreateUser(this.state.email, this.state.password)
                }>
                <Text style = {styles.submitButtonText}> Registrarse </Text>
             </TouchableOpacity>

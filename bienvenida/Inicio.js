@@ -18,8 +18,13 @@ class Inicio extends React.Component{
 
                     <TouchableOpacity style={styles.boton}
                         onPress={() => this.props.navigation.navigate('Agregar')}>
-                        <Text style={styles.textoBoton}>Agregar Hotel</Text>
+                        <Text style={styles.textoBoton}>Agregar</Text>
                     </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.boton}
+                    onPress={() => this.props.navigation.navigate('Mapa')}>
+                    <Text style={styles.textoBoton}>Mapa</Text>
+                </TouchableOpacity>
                 </View>
 
                 <View style={styles.infocontainer2}>
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'black',
         padding: 12,
-        width: '42%',
+        width: '32%',
         borderRadius: 50,
         margin: 15
     },
