@@ -1,4 +1,4 @@
-# app-movil2
+# Apartment
 
 Aplicación en react-native sobre hoteles, tiene como funcionalidad agregar hotel, visualizar hoteles y muestra
 datos en una ventana modal al seleccionar el hotel, como son nombre, ubicación, contacto, habitaciones disponibles
